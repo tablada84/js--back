@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-container {
+  position: sticky;
+  z-index: 3;
+  top: 0;
+  justify-content: space-around;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 12vh;
+  background-color: rgb(4, 4, 4);
+}
+.navbar-logo {
+  justify-self: start;
+  margin-left: 20px;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+}
+.ver-carrito {
+  font-size: 25px;
+  margin-right: 20px;
+  margin-top: 3.5vh;
+  cursor: pointer;
+}
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-image: url(./img/alex-perez-LlwHorAMpFo-unsplash.jpg);
+}
+.banner-container {
+  text-align: center;
+  padding: 15% 0;
+}
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  font-size: 62px;
+  font-weight: bold;
+}
+.banner p {
+  font-size: 30px;
+  color: antiquewhite;
+  opacity: 0.7;
+}
+.modal-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: rgba(168, 159, 159, 0.413);
+  margin-top: 30px;
+  margin-left: 80px;
+  margin-right: 80px;
+  padding: 20px;
+}
+
+.card {
+  box-shadow: 5px;
+  max-width: 300px;
+  text-align: center;
+  margin: auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.card > img {
+  width: 90%;
+  height: 250%;
+}
+
+.card .comprar {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  width: 80px;
+  font-size: 12px;
+  border-radius: 20px;
+}
+.card .button:hover {
+  opacity: 0.7;
+}
+.price {
+  color: rgb(50, 48, 48);
+  font-size: 20px;
+}
+
+.shop-contenido > .modal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 10px;
+}
+
+.shop-contenido > div > img {
+  height: 80px;
+  width: 80px;
+}
+
+.total-content {
+  font-size: 25px;
+  padding: 20px;
+  text-align: center;
+  padding-top: 20px;
+}
+.shop-contenido {
+  width: 80%;
+  margin: 0 10%;
+  max-height: 88vh;
+  color: aliceblue;
+  background-color: rgb(5, 4, 4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  overflow: auto;
+  z-index: 9;
+  top: 12vh;
+  scrollbar-color: none;
+}
+
+.shop-contenido::-webkit-scrollbar {
+  display: none;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  width: 100%;
+}
+.modal-header-title {
+  justify-self: start;
+}
+.modal-header-button {
+  cursor: pointer;
+
+}
+
+.delete-product {
+  cursor: pointer;
+}
