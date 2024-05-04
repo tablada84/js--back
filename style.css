@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   height: 12vh;
-  background-color: rgb(4, 4, 4);
+  background-color: rgb(153, 149, 149);
 }
 .navbar-logo {
   justify-self: start;
@@ -65,14 +65,13 @@
 .card {
   box-shadow: 5px;
   max-width: 300px;
-  text-align: center;
   margin: auto;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
 .card > img {
   width: 90%;
-  height: 250%;
+  height: 380%;
 }
 
 .card .comprar {
@@ -87,18 +86,18 @@
   font-size: 12px;
   border-radius: 20px;
 }
-.card .button:hover {
-  opacity: 0.7;
+.card .comprar:hover {
+  background: grey;
 }
 .price {
-  color: rgb(50, 48, 48);
+  color: rgb(57, 52, 52);
   font-size: 20px;
 }
 
 .shop-contenido > .modal-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 70%;
   margin: 10px;
@@ -152,3 +151,22 @@
 .delete-product {
   cursor: pointer;
 }
+
+.sumar{
+  cursor: pointer;
+}
+.restar{
+  cursor:pointer;
+}
+
+.cantidad-carrito{
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 37px;
+  position: absolute;
+  display: none;
+}
+

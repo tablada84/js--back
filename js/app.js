@@ -1,50 +1,6 @@
 
-let carrito = [];
+// HEADER DE CARRITO DE COMPRA
 
-productos.forEach((product) => {
-
-
-  let content = document.createElement("div");
-
-  content.className = "card";
-  content.innerHTML = `
-    <img src = "${product.img}">
-    <h3> ${product.nombre}</h3>
-    <p class = "price" >$ ${product.precio}</p>
-    <p>Cantidad: ${product.cantidad}</p>`;
-
-  modalContainer.append(content);
-
-  let comprar = document.createElement("button");
-
-  comprar.className = "comprar";
-  comprar.innerText = "comprar";
-
-  content.append(comprar);
-
-  comprar.addEventListener("click",()=>{
-
-  const repetir = carrito.some((repetirProduct)=> repetirProduct.id === product.id)
-  if(repetir){
-    carrito.map((prod)=>{
-      if(prod.id === product.id){
-        prod.cantidad ++
-      }
-    })
-  }else { 
-  
-  carrito.push({
-    id: product.id,
-    img: product.img,
-    nombre: product.nombre,
-    precio: product.precio,
-    cantidad: product.cantidad,
-  });
-
-  console.log(carrito);
-  }
-});
-})
 const pintarCarrito=() => {
   shopContenido.innerHTML = "";
   shopContenido.style.display = "flex"
@@ -76,10 +32,31 @@ const pintarCarrito=() => {
     <img src = "${product.img}">
     <h3> ${product.nombre}</h3>
     <p class = "price" >$ ${product.precio}</p>
-    <p>Cantidad: ${product.cantidad}</p>`;
+    <span class = "restar"> - </span>
+    <p>Cantidad: ${product.cantidad}</p>
+    <span class = "sumar"> + </span>`;
 
     shopContenido.append(carritoContent);
 
+
+    // CONTADOR DE PRODUCTOS, PRECIO CANTIDADES.
+
+let restar = carritoContent.querySelector(".restar")
+
+restar.addEventListener("click", ()=>{
+  if(product.cantidad !== 1){ 
+  product.cantidad --;
+  }
+  pintarCarrito()
+})
+
+let sumar = carritoContent.querySelector(".sumar")
+sumar.addEventListener("click", ()=>{
+  product.cantidad ++;
+  pintarCarrito()
+})
+
+// END 
     let eliminar = document.createElement("span")
 
   eliminar.className = "delete-product"
@@ -91,6 +68,7 @@ const pintarCarrito=() => {
 
   });
   
+  // SUMATARIO DE PRODUCTOS Y CANTIDADES
 
   let total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
@@ -103,6 +81,8 @@ Total a pagar: $${total}`;
   shopContenido.append(totalPro);
 };
 
+//END
+
 verCarrito.addEventListener("click", pintarCarrito)
 
 const eliminarProduct=()=>{
@@ -113,6 +93,13 @@ carrito = carrito.filter((carritoId)=>{
 return carritoId !== foundId
 
 })
+carritoCounter()
 pintarCarrito()
+
 }
 
+
+const carritoCounter = ()=>{
+    cantidadCarrito.style.display= "block";
+    cantidadCarrito.innerText = carrito.length;
+}
