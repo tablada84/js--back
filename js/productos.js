@@ -94,10 +94,10 @@ productos.forEach((product) => {
     precio: product.precio,
     cantidad: product.cantidad,
   });
-  carritoCounter()
-  console.log(carrito);
+
+  console.log=(carrito);
   console.log = carrito.length
-  
+  carritoCounter()
   }
 });
 })

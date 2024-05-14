@@ -1,5 +1,5 @@
 
-// HEADER DE CARRITO DE COMPRA
+// CREANDO HEADER DE CARRITO DE COMPRA
 
 const pintarCarrito=() => {
   shopContenido.innerHTML = "";
@@ -14,7 +14,7 @@ const pintarCarrito=() => {
 
   let modalButton = document.createElement("h1");
 
-  modalButton.innerText = "x";
+  modalButton.innerText = "❌";
   modalButton.className = `
   modal-header-button`;
 
@@ -68,7 +68,7 @@ sumar.addEventListener("click", ()=>{
 
   });
   
-  // SUMATARIO DE PRODUCTOS Y CANTIDADES
+  // SUMARIO DE PRODUCTOS Y CANTIDADES
 
   let total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
