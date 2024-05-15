@@ -1,4 +1,69 @@
-// alert("beinvenido/a a super marketsports")
+// // alert("beinvenido/a a super marketsports")
+
+
+
+// function Persona(nombreApellido, direccion, telefono, email){
+// this.nombreApellido =nombreApellido;
+// this.direccion = direccion;
+// this.telefono = telefono;
+// this.email= email;
+// this.saludar = ()=>{
+//     alert("bienvenido/a " + this.nombreApellido)
+// };
+// this.imprimir = ()=>{
+//     console.log(`Nombre: ${this.nombre}, direccion: ${this.direccion}, telefono: ${this.email}`)
+// }
+
+// }
+
+
+//  function validarVacio (valor){
+//     if(valor == null || valor.length == 0){
+//         return false;
+//     } else{
+//         return true;
+//     }
+// }
+
+// console.log("ingresar tus datos");
+
+// let validar = false;
+// let nombreApellido;
+// let direccion;
+// let telefono;
+// let email;
+
+// while(validar == false){
+//     nombreApellido = prompt("ingresar su nombre y apellido");
+//     validar = validarVacio(nombreApellido)
+// }
+// validar = false;
+// while(validar == false){
+//     direccion = prompt("ingresar direccion");
+//     validar = validarVacio(direccion)
+// }
+// validar = false;
+// while(validar == false){
+//     telefono = prompt("ingresar telefono");
+//     validar = validarVacio(telefono)
+// }
+// validar = false
+
+
+// while(validar == false){
+//     email = prompt("ingresar email");
+//     validar = validarVacio(email)
+// }
+// validar = false
+
+// const Cliente = new Persona(nombreApellido, direccion, telefono, email);
+
+// Cliente.saludar()
+// Cliente.imprimir()
+// console.log(Cliente)
+
+
+
 
 // const productos =[
 //   { id: 1, nombre: "tabla de surf",precio: 500, },
@@ -103,3 +168,4 @@
 //  console.log(
 //   `El valor mayor de precios de producto comprado es: ${mayorCosto[0].precio} `
 //  );
+
