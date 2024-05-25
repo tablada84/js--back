@@ -27,28 +27,42 @@ const productos = [
   },
   {
     id: 4,
-    nombre: "rollers",
+    nombre: "Rollers",
     precio: 4300,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHooAFq7Gnu-HlN35uzrNeGW5scJpePeWYUA&usqp=CAU",
     cantidad: 1,
   },
   {
     id: 5,
-    nombre: "bicicletas",
+    nombre: "Bicicletas",
     precio: 7500,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeeYLLcjNii9l5CU2asn-jFA-ndpZmPjajZQ&usqp=CAU",
     cantidad: 1,
   },
   {
     id: 6,
-    nombre: "monopatin",
+    nombre: "Monopatin",
     precio: 8300,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmXwBt_KSnkEIyA0gYnZc0mXi5MeMYXDfv4w&usqp=CAU",
     cantidad: 1,
   },
+  {
+    id: 7,
+    nombre: "Pelota de Futbol",
+    precio: 5200,
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5cGs7OURhitkzgq9379fCjxLAjEV76Tg09-KHIYMUXxl072vVDWinilq469l5LYjkrYs&usqp=CAU",
+    cantidad: 1,
+  },
+  {
+    id: 8,
+    nombre: "Pelota de Rugby",
+    precio: 4800,
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSog7hHggCY-FBlkYEFkteIXV5ReFbO5VjDNQ&usqp=CAU",
+    cantidad: 1,
+  },
 ];
 
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 
 // CREANDO LAS CARDS
@@ -71,8 +85,8 @@ productos.forEach((product) => {
 
   let comprar = document.createElement("button");
 
-  comprar.className = "comprar";
-  comprar.innerText = "comprar";
+  comprar.className = "Comprar";
+  comprar.innerText = "Comprar";
 
   content.append(comprar);
 
@@ -98,6 +112,12 @@ productos.forEach((product) => {
   console.log=(carrito);
   console.log = carrito.length
   carritoCounter()
+  saveLocal()
   }
 });
 })
+const saveLocal = ()=>{ 
+localStorage.setItem("carrito", JSON.stringify(carrito))
+
+}
+JSON.parse(localStorage.getItem("carrito"))

@@ -55,40 +55,47 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: rgba(0, 0, 0, 0.413);
+  background-color: rgba(255, 255, 255, 0.413);
   gap: 50PX;
   padding: 20px;
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(246, 243, 243, 0.2);
-  max-width: 800px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.834);
+  max-width: 600px;
   margin: auto;
   text-align: center;
-  
+  transition: 200ms;
+}
+.card:hover{
+  translate: 0 -10px;
+  box-shadow: 0 10px 5px rgba(0, 0, 0, 0.834);
 }
 .card > img {
   width: 90%;
   height: 200px;
+  transition: 200ms;
 }
 
-.card .comprar {
+.card .Comprar {
   border: none;
   outline: 0;
   padding: 12px;
+  margin:0%;
   color: white;
   background-color: black;
   text-align: center;
   cursor: pointer;
-  width: 80px;
+  width: 290px;
   font-size: 12px;
-  border-radius: 20px;
+ 
+  
 }
-.card .comprar:hover {
-  background: grey;
+.card .Comprar:hover {
+  background: rgb(89, 87, 87);
 }
-.price {
-  color: rgb(57, 52, 52);
+.shop-contenido .price {
+  color: rgb(253, 252, 252);
   font-size: 20px;
 }
 
@@ -97,13 +104,16 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  width: 70%;
+  width: 100%;
   margin: 10px;
 }
+
 
 .shop-contenido > div > img {
   height: 80px;
   width: 80px;
+  
+  text-align: center;
 }
 
 .total-content {
@@ -126,6 +136,15 @@
   z-index: 9;
   top: 12vh;
   scrollbar-color: none;
+  
+}
+.finalizar-compra{
+  background-color: rgb(82, 77, 78);
+  color: aliceblue;
+  font-size: 12px;
+  padding: 10px;
+  
+  cursor:pointer;
 }
 
 .shop-contenido::-webkit-scrollbar {
@@ -151,10 +170,24 @@
 }
 
 .sumar{
-  cursor: pointer;
+  background-color: rgb(206, 45, 58);
+  color: aliceblue;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 35px;
+  cursor:pointer;
+
 }
 .restar{
+  background-color: rgb(201, 36, 50);
+  color: aliceblue;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 4px;
+  top: 38px;
   cursor:pointer;
+ 
 }
 
 .cantidad-carrito{
@@ -167,4 +200,7 @@
   position: absolute;
   display: none;
 }
+
+
+
  

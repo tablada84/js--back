@@ -1,4 +1,4 @@
-// // alert("beinvenido/a a super marketsports")
+// alert("beinvenido/a a super marketsports")
 
 
 
@@ -44,7 +44,7 @@
 // }
 // validar = false;
 // while(validar == false){
-//     telefono = prompt("ingresar telefono");
+//     telefono = parseInt(prompt("ingresar telefono"));
 //     validar = validarVacio(telefono)
 // }
 // validar = false
@@ -105,6 +105,8 @@
 //   let precio = 0;
 //   let optenerPrecio;
 
+
+  
 //   switch (producto) {
 //     case "tabla de surf":
 //       optenerPrecio = productos.find((el) => el.nombre === producto);
@@ -127,9 +129,9 @@
 //       precio = optenerPrecio.precio;
 //       break;
 //       default:
-//       alert("no tenemos ese producto");
+//      alert("no tenemos ese producto") 
 //       break;
-      
+     
       
 //   } 
 
@@ -138,8 +140,11 @@
 //   let unidades = parseInt(prompt("cuantas unidades va a llevar"));
 
 //   carrito.push({ producto, unidades, precio });
+
 //   console.log(carrito);
-  
+
+   
+
 
 //   seleccion = prompt("desea seguir comprando?");
 
@@ -157,15 +162,24 @@
 //     });
 //     break;
 //   }
-// }
 
 // // acumulador
 // const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0);
 // alert(`el total a pagar por su compra es: $ ${total}`);
 
 
-//  const mayorCosto = carrito.filter((el) => el.precio > 500);
-//  console.log(
-//   `El valor mayor de precios de producto comprado es: ${mayorCosto[0].precio} `
-//  );
+//  function filtrarPorProducto(arr,filtro){
+//   return arr.filter((productos)=>{
+//     return productos.nombre.includes(filtro);
+//   })
+//  }
 
+// let buscar = prompt("ingresar nombre del producto")
+// const filtrado = filtrarPorProducto(productos, buscar);
+// let sumarFilt = 0;
+
+// filtrado.forEach((prod)=>{
+//   alert(prod.nombre)
+//   sumarFilt += prod.precio;
+// })
+// }

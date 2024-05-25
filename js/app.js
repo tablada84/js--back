@@ -8,13 +8,13 @@ const pintarCarrito=() => {
 
   modalHeader.className = "modal-header";
   modalHeader.innerHTML = `
-<h1 class = "modal-header-title">Carrito</h1>`;
+<h1 class = "modal-header-title">Compras</h1>`;
 
   shopContenido.append(modalHeader);
 
   let modalButton = document.createElement("h1");
 
-  modalButton.innerText = "❌";
+  modalButton.innerText = "X";
   modalButton.className = `
   modal-header-button`;
 
@@ -79,6 +79,13 @@ sumar.addEventListener("click", ()=>{
 Total a pagar: $${total}`;
 
   shopContenido.append(totalPro);
+
+  let finalizarComprar = document.createElement("button");
+
+  finalizarComprar.className = "finalizar-compra";
+  finalizarComprar.innerText = "finalizar compra"
+
+  shopContenido.append(finalizarComprar)
 };
 
 //END
@@ -94,6 +101,7 @@ return carritoId !== foundId
 
 })
 carritoCounter()
+saveLocal()
 pintarCarrito()
 
 }
@@ -101,5 +109,17 @@ pintarCarrito()
 
 const carritoCounter = ()=>{
     cantidadCarrito.style.display= "block";
-    cantidadCarrito.innerText = carrito.length;
+
+    const carritoLength = carrito.length;
+
+    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
+
+    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
+    
 }
+
+carritoCounter()
+// SET ITEM
+
+
+// GET ITEM
