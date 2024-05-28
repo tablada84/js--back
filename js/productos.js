@@ -77,9 +77,8 @@ productos.forEach((product) => {
     <img src = "${product.img}">
     <h3> ${product.nombre}</h3>
     <p class = "price" >$ ${product.precio}</p>
-    <p>Cantidad: ${product.cantidad}</p>
-`
-    ;
+    <p>Cantidad: ${product.cantidad}</p>`
+    
 
   modalContainer.append(content);
 

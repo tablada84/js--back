@@ -80,12 +80,12 @@ Total a pagar: $${total}`;
 
   shopContenido.append(totalPro);
 
-  let finalizarComprar = document.createElement("button");
+  // let finalizarComprar = document.createElement("button");
 
-  finalizarComprar.className = "finalizar-compra";
-  finalizarComprar.innerText = "finalizar compra"
+  // finalizarComprar.className = "finalizar-compra";
+  // finalizarComprar.innerText = "finalizar compra"
 
-  shopContenido.append(finalizarComprar)
+  // shopContenido.append(finalizarComprar)
 };
 
 //END
@@ -119,7 +119,3 @@ const carritoCounter = ()=>{
 }
 
 carritoCounter()
-// SET ITEM
-
-
-// GET ITEM
