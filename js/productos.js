@@ -10,6 +10,7 @@ const productos = [
     precio: 4300,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcWn1NRZL1VM2fn0jst5VWT37aaSn1x47iYQ&usqp=CAU",
     cantidad: 1,
+    title:"Skate",
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ const productos = [
     precio: 8300,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4zlE1jNTh43gz7F1-1Wxx3NuqbqydM0SIg&usqp=CAU",
     cantidad: 1,
+    title:"Tabla de surf",
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ const productos = [
     precio: 1300,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRTtP-Nuh5uoHlEVKiw-8wAP8xQ_c8v3ulyg&usqp=CAU",
     cantidad: 1,
+    title:"Pelota de Basquet",
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ const productos = [
     precio: 4300,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHooAFq7Gnu-HlN35uzrNeGW5scJpePeWYUA&usqp=CAU",
     cantidad: 1,
+    title:"Rollers",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const productos = [
     precio: 7500,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeeYLLcjNii9l5CU2asn-jFA-ndpZmPjajZQ&usqp=CAU",
     cantidad: 1,
+    title:"Bicicleta",
   },
   {
     id: 6,
@@ -45,6 +50,7 @@ const productos = [
     precio: 8300,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmXwBt_KSnkEIyA0gYnZc0mXi5MeMYXDfv4w&usqp=CAU",
     cantidad: 1,
+    title:"Monopatin",
   },
   {
     id: 7,
@@ -52,6 +58,7 @@ const productos = [
     precio: 5200,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5cGs7OURhitkzgq9379fCjxLAjEV76Tg09-KHIYMUXxl072vVDWinilq469l5LYjkrYs&usqp=CAU",
     cantidad: 1,
+    title:"Pelota de Futbol",
   },
   {
     id: 8,
@@ -59,6 +66,7 @@ const productos = [
     precio: 4800,
     img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSog7hHggCY-FBlkYEFkteIXV5ReFbO5VjDNQ&usqp=CAU",
     cantidad: 1,
+    title:"Pelota de Rugby",
   },
 ];
 
@@ -77,9 +85,9 @@ productos.forEach((product) => {
     <img src = "${product.img}">
     <h3> ${product.nombre}</h3>
     <p class = "price" >$ ${product.precio}</p>
-    <p>Cantidad: ${product.cantidad}</p>`
-    
-
+    <p>Cantidad: ${product.cantidad}</p>
+    `
+  
   modalContainer.append(content);
 
   let comprar = document.createElement("button");
@@ -106,10 +114,11 @@ productos.forEach((product) => {
     nombre: product.nombre,
     precio: product.precio,
     cantidad: product.cantidad,
+    title:product.title,
   });
 
   console.log=(carrito);
-  console.log = carrito.length
+  console.log = carrito.length 
   carritoCounter()
   saveLocal()
   }

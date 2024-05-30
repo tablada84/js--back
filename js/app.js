@@ -80,12 +80,18 @@ Total a pagar: $${total}`;
 
   shopContenido.append(totalPro);
 
-  // let finalizarComprar = document.createElement("button");
+  let finalizarComprar = document.createElement("button");
+  
+   finalizarComprar.className = "Finalizar-Compra";
+   finalizarComprar.innerText = "Finalizar Compra"
 
-  // finalizarComprar.className = "finalizar-compra";
-  // finalizarComprar.innerText = "finalizar compra"
+  shopContenido.append(finalizarComprar)
 
-  // shopContenido.append(finalizarComprar)
+  finalizarComprar.addEventListener("click", ()=>{
+      shopContenido.style.display = "none"
+      alert("Gracias por su Compra!!")
+  })
+
 };
 
 //END
@@ -110,7 +116,7 @@ pintarCarrito()
 const carritoCounter = ()=>{
     cantidadCarrito.style.display= "block";
 
-    const carritoLength = carrito.length;
+    const carritoLength = carrito.length
 
     localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
 
@@ -119,3 +125,15 @@ const carritoCounter = ()=>{
 }
 
 carritoCounter()
+
+// const vaciarCarrito=()=>{
+// let vaciarId = carrito.find((el)=> el.id)
+//   carrito = carrito.map((carritoId)=>{
+// return carritoId === vaciarId
+//   })
+
+
+
+
+
+
