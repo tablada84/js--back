@@ -1,9 +1,8 @@
-
 // CREANDO HEADER DE CARRITO DE COMPRA
 
-const pintarCarrito=() => {
+const pintarCarrito = () => {
   shopContenido.innerHTML = "";
-  shopContenido.style.display = "flex"
+  shopContenido.style.display = "flex";
   let modalHeader = document.createElement("div");
 
   modalHeader.className = "modal-header";
@@ -16,13 +15,13 @@ const pintarCarrito=() => {
 
   modalButton.innerText = "X";
   modalButton.className = `
-  modal-header-button`;
+   modal-header-button`;
 
   modalHeader.append(modalButton);
 
-  modalButton.addEventListener("click",()=>{
-    shopContenido.style.display = "none"
-  })
+  modalButton.addEventListener("click", () => {
+    shopContenido.style.display = "none";
+  });
 
   carrito.forEach((product) => {
     let carritoContent = document.createElement("div");
@@ -38,36 +37,34 @@ const pintarCarrito=() => {
 
     shopContenido.append(carritoContent);
 
-
     // CONTADOR DE PRODUCTOS, PRECIO CANTIDADES.
 
-let restar = carritoContent.querySelector(".restar")
+    let restar = carritoContent.querySelector(".restar");
 
-restar.addEventListener("click", ()=>{
-  if(product.cantidad !== 1){ 
-  product.cantidad --;
-  }
-  pintarCarrito()
-})
+    restar.addEventListener("click", () => {
+      if (product.cantidad !== 1) {
+        product.cantidad--;
+      }
+      pintarCarrito();
+    });
 
-let sumar = carritoContent.querySelector(".sumar")
-sumar.addEventListener("click", ()=>{
-  product.cantidad ++;
-  pintarCarrito()
-})
+    let sumar = carritoContent.querySelector(".sumar");
+    sumar.addEventListener("click", () => {
+      product.cantidad++;
+      pintarCarrito();
+    });
 
-// END 
-    let eliminar = document.createElement("span")
+    // END
+    let eliminar = document.createElement("span");
 
-  eliminar.className = "delete-product"
-  eliminar.innerText = "❌"
+    eliminar.className = "delete-product";
+    eliminar.innerText = "❌";
 
-  carritoContent.append(eliminar)
+    carritoContent.append(eliminar);
 
-  eliminar.addEventListener("click", eliminarProduct)
-
+    eliminar.addEventListener("click", eliminarProduct);
   });
-  
+
   // SUMARIO DE PRODUCTOS Y CANTIDADES
 
   let total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
@@ -76,64 +73,52 @@ sumar.addEventListener("click", ()=>{
 
   totalPro.className = "total-content";
   totalPro.innerHTML = `
-Total a pagar: $${total}`;
+  Total a pagar: $${total}`;
 
   shopContenido.append(totalPro);
 
   let finalizarComprar = document.createElement("button");
-  
-   finalizarComprar.className = "Finalizar-Compra";
-   finalizarComprar.innerText = "Finalizar Compra"
 
-  shopContenido.append(finalizarComprar)
+  finalizarComprar.className = "Finalizar-Compra";
+  finalizarComprar.innerText = "Finalizar Compra";
 
-  finalizarComprar.addEventListener("click", ()=>{
-      shopContenido.style.display = "none"
-      alert("Gracias por su Compra!!")
-  })
+  shopContenido.append(finalizarComprar);
 
+  finalizarComprar.addEventListener("click", () => {
+    shopContenido.style.display = "none";
+    alert("Gracias por su Compra!!");
+  });
 };
 
 //END
 
-verCarrito.addEventListener("click", pintarCarrito)
+verCarrito.addEventListener("click", pintarCarrito);
 
-const eliminarProduct=()=>{
+const eliminarProduct = () => {
+  let foundId = carrito.find((element) => element.id);
 
-let foundId = carrito.find((element)=> element.id)
+  carrito = carrito.filter((carritoId) => {
+    return carritoId !== foundId;
+  });
+  carritoCounter();
+  saveLocal();
+  pintarCarrito();
+};
 
-carrito = carrito.filter((carritoId)=>{
-return carritoId !== foundId
+const carritoCounter = () => {
+  cantidadCarrito.style.display = "block";
 
-})
-carritoCounter()
-saveLocal()
-pintarCarrito()
+  const carritoLength = carrito.length;
 
-}
+  localStorage.setItem("carritoLength", JSON.stringify(carritoLength));
 
+  cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
+};
 
-const carritoCounter = ()=>{
-    cantidadCarrito.style.display= "block";
-
-    const carritoLength = carrito.length
-
-    localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
-
-    cantidadCarrito.innerText = JSON.parse(localStorage.getItem("carritoLength"));
-    
-}
-
-carritoCounter()
+carritoCounter();
 
 // const vaciarCarrito=()=>{
 // let vaciarId = carrito.find((el)=> el.id)
 //   carrito = carrito.map((carritoId)=>{
 // return carritoId === vaciarId
 //   })
-
-
-
-
-
-
