@@ -58,7 +58,7 @@ const pintarCarrito = () => {
     let eliminar = document.createElement("span");
 
     eliminar.className = "delete-product";
-    eliminar.innerText = "x";
+    eliminar.innerHTML = "🗑️";
 
     carritoContent.append(eliminar);
 
@@ -100,13 +100,13 @@ const pintarCarrito = () => {
 verCarrito.addEventListener("click", pintarCarrito);
 
 const eliminarProduct = () => {
-  let foundId = carrito.find((element) => element.id);
+  const foundId = carrito.find((element) => element.id);
 
   carrito = carrito.filter((carritoId) => {
     return carritoId !== foundId;
   });
   carritoCounter();
-  saveLocal();
+  // saveLocal();
   pintarCarrito();
 };
 

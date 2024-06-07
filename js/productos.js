@@ -68,5 +68,5 @@ JSON.parse(localStorage.getItem("carrito"))
 }
 
 getProducts()
-// CREANDO LAS CARDS
+
 
