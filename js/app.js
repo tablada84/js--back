@@ -58,7 +58,7 @@ const pintarCarrito = () => {
     let eliminar = document.createElement("span");
 
     eliminar.className = "delete-product";
-    eliminar.innerText = "❌";
+    eliminar.innerText = "x";
 
     carritoContent.append(eliminar);
 
@@ -86,7 +86,12 @@ const pintarCarrito = () => {
 
   finalizarComprar.addEventListener("click", () => {
     shopContenido.style.display = "none";
-    alert("Gracias por su Compra!!");
+    Swal.fire({
+      
+      title: "Gracias por su compra!!",
+      text: "Vuelva Pronto!!",
+      footer: '<a href="#">Why do I have this issue?</a>'
+    });;
   });
 };
 
