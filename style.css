@@ -172,6 +172,25 @@ body {
   cursor: pointer;
 }
 
+.Vaciar{
+  background-color: rgb(206, 45, 58);
+  color: aliceblue;
+  border-radius: 0%;
+  font-size: 12px;
+  padding: 10px;
+  top: 35px;
+  cursor: pointer;
+}
+.Finalizar-Compra{
+  background-color: rgb(113, 105, 105);
+  color: aliceblue;
+  border-radius: 0%;
+  font-size: 12px;
+  padding: 10px;
+  top: 35px;
+  cursor: pointer;
+}
+
 .sumar {
   background-color: rgb(206, 45, 58);
   color: aliceblue;

@@ -7,7 +7,7 @@ const pintarCarrito = () => {
 
   modalHeader.className = "modal-header";
   modalHeader.innerHTML = `
-<h1 class = "modal-header-title">Compras</h1>`;
+ <h1 class = "modal-header-title">Compras</h1>`;
 
   shopContenido.append(modalHeader);
 
@@ -54,7 +54,7 @@ const pintarCarrito = () => {
       pintarCarrito();
     });
 
-    // END
+
     let eliminar = document.createElement("span");
 
     eliminar.className = "delete-product";
@@ -83,19 +83,39 @@ const pintarCarrito = () => {
   finalizarComprar.innerText = "Finalizar Compra";
 
   shopContenido.append(finalizarComprar);
+  const vaciarCarrito = document.createElement("button");
+
+  vaciarCarrito.className = "Vaciar";
+  vaciarCarrito.innerText = "Vaciar";
+
+  shopContenido.append(vaciarCarrito)
+  vaciarCarrito.addEventListener("click", () => {
+    carrito = [];
+    shopContenido.innerHTML=""
+    carritoCounter()
+    Swal.fire({
+
+      title: "EL carrito esta vacio!!",
+
+    });;
+    shopContenido.append(vaciarCarrito)
+  })
 
   finalizarComprar.addEventListener("click", () => {
-    shopContenido.style.display = "none";
+    shopContenido.innerHTML = ""
+    carrito = []
+    carritoCounter()
     Swal.fire({
-      
+
       title: "Gracias por su compra!!",
       text: "Vuelva Pronto!!",
-      footer: '<a href="#">Why do I have this issue?</a>'
+      footer: '<a href="#">Extreme Market</a>'
     });;
+
   });
 };
 
-//END
+
 
 verCarrito.addEventListener("click", pintarCarrito);
 
@@ -122,8 +142,4 @@ const carritoCounter = () => {
 
 carritoCounter();
 
-// const vaciarCarrito=()=>{
-// let vaciarId = carrito.find((el)=> el.id)
-//   carrito = carrito.map((carritoId)=>{
-// return carritoId === vaciarId
-//   })
+

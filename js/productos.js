@@ -54,9 +54,11 @@ data.forEach((product) => {
       });
 
       console.log = (carrito);
-      console.log = carrito.length
+       console.log=carrito.length
       carritoCounter()
       saveLocal()
+   
+    
     }
   });
 })
