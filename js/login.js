@@ -4,11 +4,7 @@ let form = document.getElementById("form")
 
 form.addEventListener("submit", (e) => {
     e.preventDefault()
-    Swal.fire({
-
-        title: "Su datos fueron enviados!!",
-       
-      });;
+  
 })
 
 resetBtn.addEventListener("click", (e) => {
