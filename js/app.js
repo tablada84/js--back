@@ -98,7 +98,7 @@ const pintarCarrito = () => {
       title: "EL carrito esta vacio!!",
 
     });;
-    shopContenido.append(vaciarCarrito)
+    // shopContenido.append(vaciarCarrito)
   })
 
   finalizarComprar.addEventListener("click", () => {

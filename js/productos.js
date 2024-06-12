@@ -22,7 +22,7 @@ data.forEach((product) => {
     <h3> ${product.nombre}</h3>
     <p class = "price" >$ ${product.precio}</p>
     <p>Cantidad: ${product.cantidad}</p>
-    `
+    <h2>${product.title}</h2>`
 
   modalContainer.append(content);
 
@@ -72,3 +72,18 @@ JSON.parse(localStorage.getItem("carrito"))
 getProducts()
 
 
+// Operadores ternarios ejm
+
+// comprar.addEventListener("click", () => {
+//   const repetir = carrito.some((repetirProduct) => repetirProduct.id === product.id);
+//   repetir ? 
+//     carrito.map((prod) => prod.id !== product.id && prod.cantidad++) :
+//     carrito.push({
+//       id: product.id,
+//       img: product.img,
+//       nombre: product.nombre,
+//       precio: product.precio,
+//       cantidad: product.cantidad,
+
+//     });
+//   })

@@ -18,35 +18,42 @@ body {
   top: 0;
   justify-content: space-around;
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
   height: 12vh;
   background-color: rgb(0, 0, 0);
 }
+
 .navbar-logo {
   justify-self: start;
   margin-left: 20px;
   color: white;
   cursor: pointer;
-  text-align: center;
+  margin-top:3.5vh;
 }
+
 .ver-carrito {
   font-size: 25px;
   margin-right: 20px;
   margin-top: 3.5vh;
   cursor: pointer;
 }
+
 .banner {
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 50vh;
+  width: 100%;
   background-image: url(./img/alex-perez-LlwHorAMpFo-unsplash.jpg);
 }
+
 .banner-container {
   text-align: center;
   padding: 15% 0;
 }
+
 .banner h1 {
   margin: 0;
   color: white;
@@ -54,11 +61,13 @@ body {
   font-size: 62px;
   font-weight: bold;
 }
+
 .banner p {
   font-size: 30px;
   color: antiquewhite;
   opacity: 0.7;
 }
+
 .modal-container {
   display: flex;
   justify-content: space-between;
@@ -75,11 +84,13 @@ body {
   text-align: center;
   transition: 300ms;
 }
+
 .card:hover {
   translate: 0 -10px;
   box-shadow: 0 10px 5px rgba(0, 0, 0, 0.834);
 }
-.card > img {
+
+.card>img {
   width: 90%;
   height: 200px;
   transition: 200ms;
@@ -97,15 +108,17 @@ body {
   width: 290px;
   font-size: 12px;
 }
+
 .card .Comprar:hover {
   background: rgb(32, 31, 31);
 }
+
 .shop-contenido .price {
   color: rgb(253, 252, 252);
   font-size: 20px;
 }
 
-.shop-contenido > .modal-content {
+.shop-contenido>.modal-content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -114,7 +127,7 @@ body {
   margin: 10px;
 }
 
-.shop-contenido > div > img {
+.shop-contenido>div>img {
   height: 80px;
   width: 80px;
 
@@ -127,6 +140,7 @@ body {
   text-align: center;
   padding-top: 20px;
 }
+
 .shop-contenido {
   width: 80%;
   margin: 0 10%;
@@ -142,6 +156,7 @@ body {
   top: 12vh;
   scrollbar-color: none;
 }
+
 .Finalizar-Compra {
   background-color: rgb(0, 0, 0);
   color: white;
@@ -154,6 +169,7 @@ body {
 .shop-contenido::-webkit-scrollbar {
   display: none;
 }
+
 .modal-header {
   display: flex;
   justify-content: space-around;
@@ -161,9 +177,11 @@ body {
   color: white;
   width: 100%;
 }
+
 .modal-header-title {
   justify-self: start;
 }
+
 .modal-header-button {
   cursor: pointer;
 }
@@ -172,7 +190,7 @@ body {
   cursor: pointer;
 }
 
-.Vaciar{
+.Vaciar {
   background-color: rgb(206, 45, 58);
   color: aliceblue;
   border-radius: 0%;
@@ -181,7 +199,8 @@ body {
   top: 35px;
   cursor: pointer;
 }
-.Finalizar-Compra{
+
+.Finalizar-Compra {
   background-color: rgb(113, 105, 105);
   color: aliceblue;
   border-radius: 0%;
@@ -200,6 +219,7 @@ body {
   top: 35px;
   cursor: pointer;
 }
+
 .restar {
   background-color: rgb(201, 36, 50);
   color: aliceblue;
@@ -231,6 +251,7 @@ form {
   margin: 50px auto 50px;
   box-shadow: 5px 5px 5px 5px rgb(10, 8, 8);
 }
+
 form h1 {
   color: white;
   text-align: center;
@@ -254,13 +275,16 @@ textarea {
   outline: none;
   resize: 50px;
 }
+
 textarea {
   height: 50px;
 }
+
 #button-row {
   display: flex;
   justify-content: space-evenly;
 }
+
 button {
   flex-grow: 1;
   width: 125px;
@@ -272,9 +296,11 @@ button {
   cursor: pointer;
   color: rgb(251, 255, 255);
 }
+
 button#send {
   background: rgb(9, 5, 5);
 }
+
 button#reset {
   background: black;
 }
