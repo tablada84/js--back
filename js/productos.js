@@ -35,23 +35,15 @@ data.forEach((product) => {
 
   comprar.addEventListener("click", () => {
 
-    const repetir = carrito.some((repetirProduct) => repetirProduct.id === product.id)
-    if (repetir) {
-      carrito.map((prod) => {
-        if (prod.id === product.id) {
-          prod.cantidad++
-        }
-      })
-    } else {
-
-      carrito.push({
-        id: product.id,
-        img: product.img,
-        nombre: product.nombre,
-        precio: product.precio,
-        cantidad: product.cantidad,
-        title: product.title,
-      });
+    const repetir = carrito.some((repetirProduct) => repetirProduct.id === product.id);
+    repetir ? carrito.map((prod) => prod.id === product.id && prod.cantidad++) : carrito.push({
+      id: product.id,
+      img: product.img,
+      nombre: product.nombre,
+      precio: product.precio,
+      cantidad: product.cantidad,
+      title: product.title,
+    });
 
       console.log = (carrito);
        console.log=carrito.length
@@ -59,31 +51,16 @@ data.forEach((product) => {
       saveLocal()
    
     
-    }
+    })
   });
-})
+}
 const saveLocal = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito))
 
 }
 JSON.parse(localStorage.getItem("carrito"))
-}
+
 
 getProducts()
 
 
-// Operadores ternarios ejm
-
-// comprar.addEventListener("click", () => {
-//   const repetir = carrito.some((repetirProduct) => repetirProduct.id === product.id);
-//   repetir ? 
-//     carrito.map((prod) => prod.id !== product.id && prod.cantidad++) :
-//     carrito.push({
-//       id: product.id,
-//       img: product.img,
-//       nombre: product.nombre,
-//       precio: product.precio,
-//       cantidad: product.cantidad,
-
-//     });
-//   })

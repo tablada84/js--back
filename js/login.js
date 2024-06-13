@@ -37,4 +37,3 @@ sendBtn.addEventListener("click", (e) => {
     localStorage.setItem('direccion', direccion);
 })
 
-// fake 
